@@ -34,7 +34,7 @@ class gui:
    value = self.entry_1.get()
    value = value.lower()
    try:
-                   app_id = "some api" # add your APi
+                   app_id = "some api" # add your APi created using WolframAlpha
                    client = wolframalpha.Client(app_id)
                    res = client.query(value)
                    answers = next(res.results).text
