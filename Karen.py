@@ -25,7 +25,7 @@ class gui:
                   audio = r.listen(source)
    try:
 
-     self.entry_1.insert(0,r.recognize_google(audio))
+     self.entry_1.insert(0,r.recognize_google(audio)) # press enter and then start speaking 
    except sr.UnknownValueError:
                    print("google speech could not understand audio")
    except sr.RequestError as e:
@@ -34,7 +34,7 @@ class gui:
    value = self.entry_1.get()
    value = value.lower()
    try:
-                   app_id = "some api"
+                   app_id = "some api" # add your APi
                    client = wolframalpha.Client(app_id)
                    res = client.query(value)
                    answers = next(res.results).text
